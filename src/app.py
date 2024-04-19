@@ -3,7 +3,7 @@ from fastapi.responses import HTMLResponse
 
 app = FastAPI() 
 
-@app.get("https://service-ten-self.vercel.app//")
+@app.get("/")
 async def show_message(name: str = "World", message: str = "I want to be friend"):
     html_content = """
         <html>
