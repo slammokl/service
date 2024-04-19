@@ -8,7 +8,7 @@ app = FastAPI()
 templates = Jinja2Templates(directory = 'templates') 
 
 @app.get("/", response_class = HTMLResponse)
-async def read_item(request: Request, nm: str = "Recruto", msg: str = "Давай дружить"):
+async def show_message(request: Request, nm: str = "Recruto", msg: str = "Давай дружить"):
     return templates.TemplateResponse(
         request=request, 
         name="item.html", 
